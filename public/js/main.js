@@ -1,18 +1,28 @@
-// Enhanced main.js with navbar fixes
+// Enhanced main.js with navbar scroll hide/show functionality
 document.addEventListener('DOMContentLoaded', function() {
-    // Ensure navbar is visible on all pages
+    // Navbar scroll hide/show functionality
     const navbar = document.querySelector('.navbar');
+    let lastScrollTop = 0;
+    
     if (navbar) {
         // Add initial background
         navbar.style.backgroundColor = 'rgba(33, 37, 41, 0.95)';
         
-        // Navbar scroll effect
+        // Navbar scroll effect with hide/show
         window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            // Only show navbar when fully at top of page
+            if (scrollTop <= 0) {
+                navbar.classList.remove('navbar-hidden');
                 navbar.classList.remove('navbar-scrolled');
+            } else {
+                // Hide navbar for any scroll position below top
+                navbar.classList.add('navbar-hidden');
+                navbar.classList.add('navbar-scrolled');
             }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
     }
 
@@ -154,6 +164,36 @@ document.addEventListener('DOMContentLoaded', function() {
             form.parentNode.insertBefore(alert, form);
         }
     }
+
+    // Dropdown hover functionality for Services menu
+    const servicesDropdown = document.getElementById('servicesDropdown');
+    const dropdownMenu = servicesDropdown ? servicesDropdown.nextElementSibling : null;
+    
+    if (servicesDropdown && dropdownMenu) {
+        const dropdownContainer = servicesDropdown.closest('.nav-item.dropdown');
+        
+        // Show dropdown on hover
+        dropdownContainer.addEventListener('mouseenter', function() {
+            dropdownMenu.classList.add('show');
+            servicesDropdown.setAttribute('aria-expanded', 'true');
+        });
+        
+        // Hide dropdown when mouse leaves
+        dropdownContainer.addEventListener('mouseleave', function() {
+            dropdownMenu.classList.remove('show');
+            servicesDropdown.setAttribute('aria-expanded', 'false');
+        });
+        
+        // Keep Bootstrap's click functionality for mobile
+        servicesDropdown.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                dropdownMenu.classList.toggle('show');
+                const isExpanded = dropdownMenu.classList.contains('show');
+                servicesDropdown.setAttribute('aria-expanded', isExpanded);
+            }
+        });
+    }
 });
 
 // Add navbar scroll styles
@@ -164,7 +204,20 @@ style.textContent = `
         backdrop-filter: blur(10px);
         transition: all 0.3s ease;
     }
+    
+    .navbar-hidden {
+        transform: translateY(-100%) !important;
+        transition: transform 0.3s ease-in-out !important;
+    }
+    
+    .navbar:not(.navbar-hidden) {
+        transform: translateY(0) !important;
+        transition: transform 0.3s ease-in-out !important;
+    }
 `;
 document.head.appendChild(style);
+
+
+
 
 
