@@ -1,154 +1,165 @@
-<!-- Hero Banner -->
-<section class="hero-banner">
-    <div class="particles-bg">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
+<!-- Hero Section -->
+<section class="hero-section-small bg-dark text-white">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 fw-bold mb-4">Our Portfolio</h1>
+                <p class="lead">Showcasing our best work and successful projects</p>
+            </div>
+        </div>
     </div>
+</section>
+
+<!-- Filter Tabs -->
+<section class="py-3 bg-light">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <div class="hero-content">
-                    <h1 class="display-4 fw-bold mb-4">Our Portfolio</h1>
-                    <p class="lead">Showcasing our latest projects and success stories across various industries. Discover how we've helped businesses transform through technology.</p>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
-                        </ol>
-                    </nav>
-                </div>
+            <div class="col-12">
+                <ul class="nav nav-pills justify-content-center" id="portfolioTabs">
+                    <li class="nav-item">
+                        <button class="nav-link active" data-filter="all">All Projects</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-filter="web">Web Design</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-filter="app">Mobile Apps</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="nav-link" data-filter="ecommerce">E-commerce</button>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Portfolio Grid -->
 <section class="py-5">
     <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-img-top bg-primary d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="fas fa-shopping-cart fa-4x text-white"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">E-Commerce Platform</h5>
-                        <p class="card-text">A full-featured e-commerce solution with payment integration, inventory management, and analytics dashboard. Handles 10,000+ daily transactions.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">React</span>
-                            <span class="badge bg-secondary me-1">Node.js</span>
-                            <span class="badge bg-secondary">MongoDB</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">Retail Industry</small>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
+        <div class="row g-4" id="portfolioGrid">
+            <!-- Project 1 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop" 
+                             alt="TechCorp Website" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>TechCorp Website</h5>
+                                <p>Corporate website redesign</p>
+                                <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-img-top bg-success d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="fas fa-chart-line fa-4x text-white"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Analytics Dashboard</h5>
-                        <p class="card-text">Real-time data visualization dashboard for business intelligence and reporting. Processes millions of data points daily with interactive charts.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">Vue.js</span>
-                            <span class="badge bg-secondary me-1">Python</span>
-                            <span class="badge bg-secondary">PostgreSQL</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">Finance</small>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
-                        </div>
+                    <div class="portfolio-info p-3">
+                        <h6>TechCorp Website</h6>
+                        <p class="text-muted small">Web Design • Development</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-img-top bg-info d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="fas fa-mobile-alt fa-4x text-white"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Fitness Tracking App</h5>
-                        <p class="card-text">Cross-platform mobile app for fitness tracking with social features and gamification. Over 50,000 active users and 4.8-star rating.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">React Native</span>
-                            <span class="badge bg-secondary me-1">Firebase</span>
-                            <span class="badge bg-secondary">Redux</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">Health & Fitness</small>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
+
+            <!-- Project 2 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="app">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?w=400&h=300&fit=crop" 
+                             alt="FitTracker App" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>FitTracker App</h5>
+                                <p>Fitness tracking mobile app</p>
+                                <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-img-top bg-warning d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="fas fa-graduation-cap fa-4x text-white"></i>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Learning Management System</h5>
-                        <p class="card-text">Comprehensive LMS with video streaming, interactive quizzes, and progress tracking. Serves 25,000+ students across multiple institutions.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">Angular</span>
-                            <span class="badge bg-secondary me-1">Django</span>
-                            <span class="badge bg-secondary">MySQL</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">Education</small>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
-                        </div>
+                    <div class="portfolio-info p-3">
+                        <h6>FitTracker App</h6>
+                        <p class="text-muted small">Mobile App • UI/UX</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-img-top bg-danger d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="fas fa-hospital fa-4x text-white"></i>
+
+            <!-- Project 3 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="ecommerce">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=300&fit=crop" 
+                             alt="Fashion Store" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Fashion Store</h5>
+                                <p>E-commerce platform</p>
+                                <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Healthcare Management</h5>
-                        <p class="card-text">HIPAA-compliant patient management system with appointment scheduling, medical records, and telemedicine capabilities.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">React</span>
-                            <span class="badge bg-secondary me-1">Express</span>
-                            <span class="badge bg-secondary">PostgreSQL</span>
-                        </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">Healthcare</small>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
-                        </div>
+                    <div class="portfolio-info p-3">
+                        <h6>Fashion Store</h6>
+                        <p class="text-muted small">E-commerce • Web Development</p>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-img-top bg-dark d-flex align-items-center justify-content-center" style="height: 200px;">
-                        <i class="fas fa-building fa-4x text-white"></i>
+
+            <!-- Project 4 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="web">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=300&fit=crop" 
+                             alt="Restaurant Website" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Restaurant Website</h5>
+                                <p>Modern restaurant website</p>
+                                <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">Property Management</h5>
-                        <p class="card-text">Complete property management solution with tenant portals, maintenance tracking, and financial reporting for real estate companies.</p>
-                        <div class="mb-3">
-                            <span class="badge bg-secondary me-1">Vue.js</span>
-                            <span class="badge bg-secondary me-1">Laravel</span>
-                            <span class="badge bg-secondary">Redis</span>
+                    <div class="portfolio-info p-3">
+                        <h6>Restaurant Website</h6>
+                        <p class="text-muted small">Web Design • Branding</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="app">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=300&fit=crop" 
+                             alt="Banking App" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Banking App</h5>
+                                <p>Secure banking application</p>
+                                <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <small class="text-muted">Real Estate</small>
-                            <a href="#" class="btn btn-outline-primary">View Project</a>
+                    </div>
+                    <div class="portfolio-info p-3">
+                        <h6>Banking App</h6>
+                        <p class="text-muted small">Mobile App • Security</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-lg-4 col-md-6 portfolio-item" data-category="ecommerce">
+                <div class="portfolio-card">
+                    <div class="portfolio-image">
+                        <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=300&fit=crop" 
+                             alt="Electronics Store" class="img-fluid">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-content">
+                                <h5>Electronics Store</h5>
+                                <p>Multi-vendor marketplace</p>
+                                <a href="#" class="btn btn-light btn-sm">View Project</a>
+                            </div>
                         </div>
+                    </div>
+                    <div class="portfolio-info p-3">
+                        <h6>Electronics Store</h6>
+                        <p class="text-muted small">E-commerce • Marketplace</p>
                     </div>
                 </div>
             </div>
@@ -156,111 +167,25 @@
     </div>
 </section>
 
+<!-- Case Study Section -->
 <section class="py-5 bg-light">
     <div class="container">
-        <div class="row text-center mb-5">
-            <div class="col-12">
-                <h2 class="display-6 fw-bold">Project Statistics</h2>
-                <p class="lead">Numbers that speak for our expertise</p>
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-5 fw-bold mb-4">Featured Case Study</h2>
+                <h4 class="text-primary">TechCorp Digital Transformation</h4>
+                <p class="lead">How we helped TechCorp increase their online conversions by 300%</p>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Complete website redesign</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile-first approach</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>SEO optimization</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Performance improvements</li>
+                </ul>
+                <a href="#" class="btn btn-primary btn-lg">Read Full Case Study</a>
             </div>
-        </div>
-        <div class="row g-4 text-center">
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <i class="fas fa-project-diagram fa-3x text-primary mb-3"></i>
-                        <h3 class="fw-bold text-primary">50+</h3>
-                        <p class="mb-0">Projects Completed</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <i class="fas fa-users fa-3x text-primary mb-3"></i>
-                        <h3 class="fw-bold text-primary">100K+</h3>
-                        <p class="mb-0">Active Users</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <i class="fas fa-smile fa-3x text-primary mb-3"></i>
-                        <h3 class="fw-bold text-primary">98%</h3>
-                        <p class="mb-0">Client Satisfaction</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <i class="fas fa-clock fa-3x text-primary mb-3"></i>
-                        <h3 class="fw-bold text-primary">95%</h3>
-                        <p class="mb-0">On-Time Delivery</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5">
-    <div class="container">
-        <div class="row text-center mb-5">
-            <div class="col-12">
-                <h2 class="display-6 fw-bold">Industries We Serve</h2>
-                <p class="lead">Delivering solutions across diverse sectors</p>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-shopping-bag fa-3x text-primary mb-3"></i>
-                    <h6>E-Commerce</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-heartbeat fa-3x text-primary mb-3"></i>
-                    <h6>Healthcare</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-graduation-cap fa-3x text-primary mb-3"></i>
-                    <h6>Education</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
-                    <h6>Finance</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-home fa-3x text-primary mb-3"></i>
-                    <h6>Real Estate</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-dumbbell fa-3x text-primary mb-3"></i>
-                    <h6>Fitness</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-utensils fa-3x text-primary mb-3"></i>
-                    <h6>Food & Beverage</h6>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6">
-                <div class="text-center p-3">
-                    <i class="fas fa-cogs fa-3x text-primary mb-3"></i>
-                    <h6>Manufacturing</h6>
-                </div>
+            <div class="col-lg-6">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" 
+                     alt="Case Study" class="img-fluid rounded-3 shadow">
             </div>
         </div>
     </div>
@@ -276,3 +201,4 @@
         </div>
     </div>
 </section>
+

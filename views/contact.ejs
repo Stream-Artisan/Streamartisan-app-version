@@ -1,88 +1,194 @@
-<!-- Hero Banner -->
-<section class="hero-banner">
-    <div class="particles-bg">
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-        <div class="particle"></div>
-    </div>
+<!-- Hero Section -->
+<section class="hero-section-small bg-gradient text-white">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto text-center">
-                <div class="hero-content">
-                    <h1 class="display-4 fw-bold mb-4">Contact Us</h1>
-                    <p class="lead">Let's bring your vision to life with our proven development process. Start your digital transformation journey today.</p>
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item"><a href="/">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Contact</li>
-                        </ol>
-                    </nav>
-                </div>
+        <div class="row text-center">
+            <div class="col-lg-8 mx-auto">
+                <h1 class="display-4 fw-bold mb-4">Get In Touch</h1>
+                <p class="lead">Ready to start your project? Let's discuss how we can help you achieve your goals.</p>
             </div>
         </div>
     </div>
 </section>
 
-
+<!-- Contact Section -->
 <section class="py-5">
     <div class="container">
-        <div class="row">
+        <div class="row g-5">
+            <!-- Contact Form -->
             <div class="col-lg-8">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-5">
-                        <h3 class="mb-4">Send us a message</h3>
-                        <form action="/contact" method="POST">
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="name" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
+                <div class="contact-form-wrapper">
+                    <h3 class="mb-4">Send us a message</h3>
+                    <form id="contactForm" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" class="form-control" id="firstName" required>
+                                <div class="invalid-feedback">Please provide your first name.</div>
                             </div>
-                            <div class="mb-3">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" name="subject" required>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" class="form-control" id="lastName" required>
+                                <div class="invalid-feedback">Please provide your last name.</div>
                             </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please provide a valid email.</div>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-                        </form>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="col-12">
+                                <label for="company" class="form-label">Company</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+                            <div class="col-12">
+                                <label for="service" class="form-label">Service Interested In</label>
+                                <select class="form-select" id="service">
+                                    <option value="">Select a service</option>
+                                    <option value="web-design">Web Design</option>
+                                    <option value="web-development">Web Development</option>
+                                    <option value="mobile-app">Mobile App Development</option>
+                                    <option value="digital-marketing">Digital Marketing</option>
+                                    <option value="consultation">Consultation</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="budget" class="form-label">Project Budget</label>
+                                <select class="form-select" id="budget">
+                                    <option value="">Select budget range</option>
+                                    <option value="5k-10k">$5,000 - $10,000</option>
+                                    <option value="10k-25k">$10,000 - $25,000</option>
+                                    <option value="25k-50k">$25,000 - $50,000</option>
+                                    <option value="50k+">$50,000+</option>
+                                </select>
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Message *</label>
+                                <textarea class="form-control" id="message" rows="5" required 
+                                          placeholder="Tell us about your project..."></textarea>
+                                <div class="invalid-feedback">Please provide a message.</div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-lg-4">
+                <div class="contact-info">
+                    <h3 class="mb-4">Contact Information</h3>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Address</h6>
+                            <p>123 Business Street<br>Suite 100<br>City, State 12345</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Phone</h6>
+                            <p><a href="tel:+1234567890">+1 (234) 567-8900</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Email</h6>
+                            <p><a href="mailto:hello@streamartisan.com">hello@streamartisan.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item mb-4">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h6>Business Hours</h6>
+                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday: 10:00 AM - 4:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links mt-4">
+                        <h6>Follow Us</h6>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4">
-                        <h5 class="mb-4">Get in Touch</h5>
-                        <div class="mb-3">
-                            <i class="fas fa-envelope text-primary me-3"></i>
-                            <span>info@streamartisan.com</span>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="py-0">
+    <div class="container-fluid p-0">
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.123456789!2d-74.0059413!3d40.7128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjEiTiA3NMKwMDAnMjEuNCJX!5e0!3m2!1sen!2sus!4v1234567890" 
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h3 class="text-center mb-5">Frequently Asked Questions</h3>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How long does a typical project take?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Project timelines vary depending on complexity, but most websites take 4-8 weeks, while mobile apps can take 8-16 weeks.
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <i class="fas fa-phone text-primary me-3"></i>
-                            <span>+1 (555) 123-4567</span>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                Do you provide ongoing support?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes, we offer various support packages including maintenance, updates, and technical support to keep your project running smoothly.
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                            <span>123 Tech Street, Silicon Valley, CA 94000</span>
-                        </div>
-                        <hr>
-                        <h6 class="mb-3">Follow Us</h6>
-                        <div class="social-links">
-                            <a href="#" class="text-primary me-3"><i class="fab fa-linkedin fa-2x"></i></a>
-                            <a href="#" class="text-primary me-3"><i class="fab fa-twitter fa-2x"></i></a>
-                            <a href="#" class="text-primary"><i class="fab fa-github fa-2x"></i></a>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                What's included in your web design service?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Our web design service includes UI/UX design, responsive layouts, brand integration, and up to 3 rounds of revisions.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,3 +196,4 @@
         </div>
     </div>
 </section>
+

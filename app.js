@@ -39,7 +39,7 @@ app.get('/contact', (req, res) => {
 })
 
 app.get('/get-started', (req, res) => {
-  res.render('get-started', { title: 'Get Started - StreamArtisan', page: 'get-started' })
+  res.render('contact', { title: 'Get Started - StreamArtisan', page: 'contact' })
 })
 
 // Contact form handler
@@ -49,6 +49,25 @@ app.post('/contact', (req, res) => {
   res.redirect('/contact?success=true')
 })
 
+// Add error handling middleware
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).render('error', { 
+    title: 'Error - StreamArtisan', 
+    page: 'error',
+    error: process.env.NODE_ENV === 'production' ? {} : err 
+  })
+})
+
+// 404 handler
+app.use((req, res) => {
+  res.status(404).render('404', { 
+    title: 'Page Not Found - StreamArtisan', 
+    page: '404' 
+  })
+})
+
 app.listen(port, () => {
   console.log(`StreamArtisan app listening on port ${port}`)
 })
+
