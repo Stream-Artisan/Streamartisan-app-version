@@ -42,6 +42,40 @@ app.get('/get-started', (req, res) => {
   res.render('contact', { title: 'Get Started - StreamArtisan', page: 'contact' })
 })
 
+// Test route to check services directory
+app.get('/services/test', (req, res) => {
+  res.render('services/test', { title: 'Test', page: 'services' })
+})
+
+// Individual service routes
+app.get('/services/web-design', (req, res) => {
+  res.render('services/web-design', { 
+    title: 'Professional Web Design Services | StreamArtisan', 
+    page: 'services' 
+  })
+})
+
+app.get('/services/web-development', (req, res) => {
+  res.render('services/web-development', { 
+    title: 'Custom Web Development Services | StreamArtisan', 
+    page: 'services' 
+  })
+})
+
+app.get('/services/mobile-apps', (req, res) => {
+  res.render('services/mobile-apps', { 
+    title: 'Mobile App Development Services | StreamArtisan', 
+    page: 'services' 
+  })
+})
+
+app.get('/services/digital-marketing', (req, res) => {
+  res.render('services/digital-marketing', { 
+    title: 'Digital Marketing Services | StreamArtisan', 
+    page: 'services' 
+  })
+})
+
 // Contact form handler
 app.post('/contact', (req, res) => {
   const { name, email, subject, message } = req.body
@@ -70,4 +104,7 @@ app.use((req, res) => {
 app.listen(port, () => {
   console.log(`StreamArtisan app listening on port ${port}`)
 })
+
+
+
 
