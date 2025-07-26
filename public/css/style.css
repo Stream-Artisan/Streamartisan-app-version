@@ -26,6 +26,105 @@
     --shadow-glow: 0 0 30px rgba(102, 126, 234, 0.3);
 }
 
+/* Typography Scale System */
+:root {
+    /* Font Scale */
+    --font-size-xs: 0.75rem;    /* 12px */
+    --font-size-sm: 0.875rem;   /* 14px */
+    --font-size-base: 1rem;     /* 16px */
+    --font-size-lg: 1.125rem;   /* 18px */
+    --font-size-xl: 1.25rem;    /* 20px */
+    --font-size-2xl: 1.5rem;    /* 24px */
+    --font-size-3xl: 1.875rem;  /* 30px */
+    --font-size-4xl: 2.25rem;   /* 36px */
+    --font-size-5xl: 3rem;      /* 48px */
+    --font-size-6xl: 3.75rem;   /* 60px */
+    
+    /* Font Weights */
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    
+    /* Line Heights */
+    --line-height-tight: 1.25;
+    --line-height-snug: 1.375;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.625;
+    --line-height-loose: 2;
+}
+
+/* Unified Typography Classes */
+.text-xs { font-size: var(--font-size-xs); }
+.text-sm { font-size: var(--font-size-sm); }
+.text-base { font-size: var(--font-size-base); }
+.text-lg { font-size: var(--font-size-lg); }
+.text-xl { font-size: var(--font-size-xl); }
+.text-2xl { font-size: var(--font-size-2xl); }
+.text-3xl { font-size: var(--font-size-3xl); }
+.text-4xl { font-size: var(--font-size-4xl); }
+.text-5xl { font-size: var(--font-size-5xl); }
+.text-6xl { font-size: var(--font-size-6xl); }
+
+.font-light { font-weight: var(--font-weight-light); }
+.font-normal { font-weight: var(--font-weight-normal); }
+.font-medium { font-weight: var(--font-weight-medium); }
+.font-semibold { font-weight: var(--font-weight-semibold); }
+.font-bold { font-weight: var(--font-weight-bold); }
+.font-extrabold { font-weight: var(--font-weight-extrabold); }
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    :root {
+        --font-size-5xl: 2.25rem;  /* 36px on mobile */
+        --font-size-4xl: 1.875rem; /* 30px on mobile */
+        --font-size-3xl: 1.5rem;   /* 24px on mobile */
+    }
+    
+    .display-1, .display-2, .display-3 {
+        font-size: var(--font-size-4xl) !important;
+        line-height: var(--line-height-tight) !important;
+    }
+    
+    .display-4, .display-5 {
+        font-size: var(--font-size-3xl) !important;
+        line-height: var(--line-height-snug) !important;
+    }
+}
+
+/* Image Optimization */
+img {
+    max-width: 100%;
+    height: auto;
+    loading: lazy;
+}
+
+.img-optimized {
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Grid Improvements */
+@media (max-width: 576px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .row {
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+    }
+    
+    .col, [class*="col-"] {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
 /* Global Animations */
 * {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -2040,6 +2139,63 @@ section.hero-section-small {
     /* border: 2px solid red !important; */ /* Removed debug style */
 }
 
+/* Enhanced Mobile Navigation */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 8px;
+        margin-top: 1rem;
+        padding: 1rem;
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        border-radius: 6px;
+        margin: 0.25rem 0;
+        color: var(--dark-color) !important;
+        font-weight: var(--font-weight-medium);
+    }
+    
+    .navbar-nav .nav-link:hover {
+        background: var(--primary-soft);
+        color: var(--primary-color) !important;
+    }
+    
+    .dropdown-menu {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding-left: 1rem;
+    }
+    
+    .dropdown-item {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        color: var(--secondary-color);
+        font-size: var(--font-size-sm);
+    }
+    
+    .dropdown-item:hover {
+        background: var(--light-color);
+        color: var(--primary-color);
+    }
+}
 
+/* Touch-friendly buttons */
+@media (max-width: 768px) {
+    .btn {
+        min-height: 44px;
+        padding: 0.75rem 1.5rem;
+        font-size: var(--font-size-base);
+    }
+    
+    .navbar-toggler {
+        padding: 0.5rem;
+        border: none;
+        font-size: 1.5rem;
+    }
+}
 
 

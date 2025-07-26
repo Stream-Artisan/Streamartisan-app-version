@@ -217,6 +217,48 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Lazy Loading Implementation
+function initLazyLoading() {
+    const images = document.querySelectorAll('img[data-src]');
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.remove('lazy');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+
+    images.forEach(img => imageObserver.observe(img));
+}
+
+// Image Compression Helper
+function optimizeImages() {
+    const images = document.querySelectorAll('img');
+    images.forEach(img => {
+        // Add loading attribute for native lazy loading
+        if (!img.hasAttribute('loading')) {
+            img.setAttribute('loading', 'lazy');
+        }
+        
+        // Add alt text if missing
+        if (!img.hasAttribute('alt') || img.alt === '') {
+            const src = img.src || img.dataset.src || '';
+            const filename = src.split('/').pop().split('.')[0];
+            img.alt = filename.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        }
+    });
+}
+
+// Initialize on DOM load
+document.addEventListener('DOMContentLoaded', function() {
+    initLazyLoading();
+    optimizeImages();
+});
+
+
 
 
 

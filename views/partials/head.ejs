@@ -27,7 +27,7 @@
     <meta name="twitter:description" content="<%= typeof description !== 'undefined' ? description : 'Transform your vision into stunning digital realities with cutting-edge design and development.' %>">
     <meta name="twitter:image" content="https://streamartisan.com/images/og-image.jpg">
     
-    <!-- Schema.org JSON-LD -->
+    <!-- Enhanced Schema.org JSON-LD -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -35,7 +35,8 @@
         "name": "StreamArtisan",
         "url": "https://streamartisan.com",
         "logo": "https://streamartisan.com/images/logo.png",
-        "description": "Professional web development and design services",
+        "description": "Professional web development and design services specializing in responsive websites, mobile apps, and digital marketing solutions.",
+        "foundingDate": "2020",
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "US"
@@ -44,24 +45,77 @@
             "@type": "ContactPoint",
             "telephone": "+1-555-0123",
             "contactType": "customer service",
-            "availableLanguage": "English"
+            "availableLanguage": ["English"],
+            "areaServed": "US"
         },
         "sameAs": [
             "https://facebook.com/streamartisan",
             "https://twitter.com/streamartisan",
-            "https://linkedin.com/company/streamartisan"
-        ]
+            "https://linkedin.com/company/streamartisan",
+            "https://instagram.com/streamartisan"
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Web Development Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Web Design",
+                        "description": "Custom responsive web design services"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Web Development",
+                        "description": "Full-stack web development solutions"
+                    }
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "Service",
+                        "name": "Mobile App Development",
+                        "description": "Native and cross-platform mobile applications"
+                    }
+                }
+            ]
+        }
     }
     </script>
+
+    <!-- Service-specific Schema (conditional) -->
+    <% if (typeof serviceSchema !== 'undefined') { %>
+    <script type="application/ld+json">
+    <%- JSON.stringify(serviceSchema) %>
+    </script>
+    <% } %>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style">
+    <link rel="preload" href="/css/style.css" as="style">
+    
+    <!-- DNS prefetch for external resources -->
+    <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//images.unsplash.com">
+    
+    <!-- Optimized Bootstrap CSS with integrity -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-9ndCyUa6c4iuQ+jJKqp8RlHG8jNyuVPqH5PaQtkqlhC6t5+dGzjPAhIeeFh/AK/G" 
+          crossorigin="anonymous">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
